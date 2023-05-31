@@ -5,20 +5,20 @@
 class Irir < Formula
   desc "A filter to add colors for text lines generically from a YAML configuration file easily"
   homepage "https://github.com/bayashi/irir"
-  version "0.3.0"
+  version "0.3.1"
 
   on_macos do
-    if Hardware::CPU.arm?
-      url "https://github.com/bayashi/irir/releases/download/v0.3.0/irir_0.3.0_darwin_arm64.tar.gz"
-      sha256 "836d4c71b4dbbf81f3e33c80a8a08053eba726b7cb8db17206b7a81f9618de73"
+    if Hardware::CPU.intel?
+      url "https://github.com/bayashi/irir/releases/download/v0.3.1/irir_0.3.1_darwin_amd64.tar.gz"
+      sha256 "000878cb0f28f6f6a11eb44a1db43f26334fd457e6925bdab5bd82fbe3aec892"
 
       def install
         bin.install "irir"
       end
     end
-    if Hardware::CPU.intel?
-      url "https://github.com/bayashi/irir/releases/download/v0.3.0/irir_0.3.0_darwin_amd64.tar.gz"
-      sha256 "bc3c436472c0ddd61805ea9aaafaa24400e0526518c4fa68450f96f3d9ce87ff"
+    if Hardware::CPU.arm?
+      url "https://github.com/bayashi/irir/releases/download/v0.3.1/irir_0.3.1_darwin_arm64.tar.gz"
+      sha256 "1fbf2a4cb47df15c115a7f7b6a9bdb5b4a7a7ed54e627c1a354cff223b052f2c"
 
       def install
         bin.install "irir"
@@ -27,17 +27,17 @@ class Irir < Formula
   end
 
   on_linux do
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/bayashi/irir/releases/download/v0.3.0/irir_0.3.0_linux_arm64.tar.gz"
-      sha256 "78340d40746dfb2c6ff97958805dc9ec7f6d3edea0a2edaf0d74462e0736c3b9"
+    if Hardware::CPU.intel?
+      url "https://github.com/bayashi/irir/releases/download/v0.3.1/irir_0.3.1_linux_amd64.tar.gz"
+      sha256 "681c4f8ab75ea22c8cc6c352b763ccd906e6213fd0533998065b77223c3ebdb0"
 
       def install
         bin.install "irir"
       end
     end
-    if Hardware::CPU.intel?
-      url "https://github.com/bayashi/irir/releases/download/v0.3.0/irir_0.3.0_linux_amd64.tar.gz"
-      sha256 "e10b557d30997e77b0d9d1a29d5387b867aea8a97a51b438388f11729e0bac4e"
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/bayashi/irir/releases/download/v0.3.1/irir_0.3.1_linux_arm64.tar.gz"
+      sha256 "b9005f00e0ee4cc72acdfd5b0070f47571a32cad2638d339850f2c52c7f50f09"
 
       def install
         bin.install "irir"
