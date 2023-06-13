@@ -5,20 +5,20 @@
 class GoJl < Formula
   desc "Show the `JSON within JSON` log nicely"
   homepage "https://github.com/bayashi/go-jl"
-  version "1.0.2"
+  version "1.1.0"
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/bayashi/go-jl/releases/download/v1.0.2/go-jl_1.0.2_darwin_arm64.tar.gz"
-      sha256 "98bdb728c53126876f7d176ddf62c022673a9028fcbf58a55d5881f04024b7f7"
+      url "https://github.com/bayashi/go-jl/releases/download/v1.1.0/go-jl_1.1.0_darwin_arm64.tar.gz"
+      sha256 "25d12aacb37c86905586957a7244735868ccd749f69316a917263cb79c34e8e8"
 
       def install
         bin.install "jl"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/bayashi/go-jl/releases/download/v1.0.2/go-jl_1.0.2_darwin_amd64.tar.gz"
-      sha256 "f7545221d7d37ef045fdc9bbf08acd6ee60244285dc2fcff314bb28a623d1f9d"
+      url "https://github.com/bayashi/go-jl/releases/download/v1.1.0/go-jl_1.1.0_darwin_amd64.tar.gz"
+      sha256 "67c638c4aadddab20dc60060ade93bda7fff3ed958bb3caae5c10867529fbb00"
 
       def install
         bin.install "jl"
@@ -28,16 +28,16 @@ class GoJl < Formula
 
   on_linux do
     if Hardware::CPU.intel?
-      url "https://github.com/bayashi/go-jl/releases/download/v1.0.2/go-jl_1.0.2_linux_amd64.tar.gz"
-      sha256 "a6cd0550d4a31acbb5410c6c0fff7240d1aaae6632fcc6720fa4972778ff76f5"
+      url "https://github.com/bayashi/go-jl/releases/download/v1.1.0/go-jl_1.1.0_linux_amd64.tar.gz"
+      sha256 "84d867be1ec981e19b8906e332be9f8fc7a364bf481c5e344aefb51d93e28cbc"
 
       def install
         bin.install "jl"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/bayashi/go-jl/releases/download/v1.0.2/go-jl_1.0.2_linux_arm64.tar.gz"
-      sha256 "904d866ffeb79528aacbe7f7c0ac608d6af8675c4950b3f0438c65b4b51b4ebd"
+      url "https://github.com/bayashi/go-jl/releases/download/v1.1.0/go-jl_1.1.0_linux_arm64.tar.gz"
+      sha256 "3ad23e908c7e5e6fdafba96982db2c5619be5d3f9b9b5db00731ca8bc954918f"
 
       def install
         bin.install "jl"
