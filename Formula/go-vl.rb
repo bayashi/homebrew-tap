@@ -5,20 +5,20 @@
 class GoVl < Formula
   desc "Makes CUI table vertical"
   homepage "https://github.com/bayashi/go-vl"
-  version "0.0.1"
+  version "0.0.2"
 
   on_macos do
-    if Hardware::CPU.arm?
-      url "https://github.com/bayashi/go-vl/releases/download/v0.0.1/go-vl_0.0.1_darwin_arm64.tar.gz"
-      sha256 "3602d8ed18c9d24e7eaec8653533438a6ffcc6fa49abb8f9fda3c352dfd8ea6d"
+    if Hardware::CPU.intel?
+      url "https://github.com/bayashi/go-vl/releases/download/v0.0.2/go-vl_0.0.2_darwin_amd64.tar.gz"
+      sha256 "c22338c524c7a03af5ce6cf1713d2e514f360f6dda54dd4e3fbfb1ab72d1e667"
 
       def install
         bin.install "vl"
       end
     end
-    if Hardware::CPU.intel?
-      url "https://github.com/bayashi/go-vl/releases/download/v0.0.1/go-vl_0.0.1_darwin_amd64.tar.gz"
-      sha256 "40a555e77649daf01c71dc61097c657f59fa5a9bfccdaef6baf742d70e3c9f69"
+    if Hardware::CPU.arm?
+      url "https://github.com/bayashi/go-vl/releases/download/v0.0.2/go-vl_0.0.2_darwin_arm64.tar.gz"
+      sha256 "0de0c71bc1a9eaa4a560fc559a04e042806c0ea6a6b01c13c7c6882552829e23"
 
       def install
         bin.install "vl"
@@ -27,17 +27,17 @@ class GoVl < Formula
   end
 
   on_linux do
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/bayashi/go-vl/releases/download/v0.0.1/go-vl_0.0.1_linux_arm64.tar.gz"
-      sha256 "9d0bd46e908427dc33b93a2e01aec0ee14dac4aeebfdb20248f6338ac7101756"
+    if Hardware::CPU.intel?
+      url "https://github.com/bayashi/go-vl/releases/download/v0.0.2/go-vl_0.0.2_linux_amd64.tar.gz"
+      sha256 "b03db3deab505206d4cf9aeceab8397e5538fc44ffa5712cdb4683394d24c388"
 
       def install
         bin.install "vl"
       end
     end
-    if Hardware::CPU.intel?
-      url "https://github.com/bayashi/go-vl/releases/download/v0.0.1/go-vl_0.0.1_linux_amd64.tar.gz"
-      sha256 "a53d2b76c15c5ff1a93fe0fe705c5e0cae8884737faead249dd216646b958472"
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/bayashi/go-vl/releases/download/v0.0.2/go-vl_0.0.2_linux_arm64.tar.gz"
+      sha256 "7cf88d6b4c6f8c7b35919fd3f1bd9147eed56e850343d0cf6488ec9f5b794a2c"
 
       def install
         bin.install "vl"
