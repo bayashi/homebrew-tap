@@ -5,20 +5,20 @@
 class GoJl < Formula
   desc "Show the `JSON within JSON` log nicely"
   homepage "https://github.com/bayashi/go-jl"
-  version "1.1.0"
+  version "1.2.0"
 
   on_macos do
-    if Hardware::CPU.arm?
-      url "https://github.com/bayashi/go-jl/releases/download/v1.1.0/go-jl_1.1.0_darwin_arm64.tar.gz"
-      sha256 "25d12aacb37c86905586957a7244735868ccd749f69316a917263cb79c34e8e8"
+    if Hardware::CPU.intel?
+      url "https://github.com/bayashi/go-jl/releases/download/v1.2.0/go-jl_1.2.0_darwin_amd64.tar.gz"
+      sha256 "3fd5ee8ba49301c75665a4438f95316c80435888480ce2428590c4cecc2b9b8e"
 
       def install
         bin.install "jl"
       end
     end
-    if Hardware::CPU.intel?
-      url "https://github.com/bayashi/go-jl/releases/download/v1.1.0/go-jl_1.1.0_darwin_amd64.tar.gz"
-      sha256 "67c638c4aadddab20dc60060ade93bda7fff3ed958bb3caae5c10867529fbb00"
+    if Hardware::CPU.arm?
+      url "https://github.com/bayashi/go-jl/releases/download/v1.2.0/go-jl_1.2.0_darwin_arm64.tar.gz"
+      sha256 "cb1c002e29d4716c9692da0eddf0104c073923453ca099f937a02367b52471f3"
 
       def install
         bin.install "jl"
@@ -27,17 +27,17 @@ class GoJl < Formula
   end
 
   on_linux do
-    if Hardware::CPU.intel?
-      url "https://github.com/bayashi/go-jl/releases/download/v1.1.0/go-jl_1.1.0_linux_amd64.tar.gz"
-      sha256 "84d867be1ec981e19b8906e332be9f8fc7a364bf481c5e344aefb51d93e28cbc"
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/bayashi/go-jl/releases/download/v1.2.0/go-jl_1.2.0_linux_arm64.tar.gz"
+      sha256 "25abfafd35d5c1efbcfd35f7404f94a4432d97e3432eebe11ff92840e57d5919"
 
       def install
         bin.install "jl"
       end
     end
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/bayashi/go-jl/releases/download/v1.1.0/go-jl_1.1.0_linux_arm64.tar.gz"
-      sha256 "3ad23e908c7e5e6fdafba96982db2c5619be5d3f9b9b5db00731ca8bc954918f"
+    if Hardware::CPU.intel?
+      url "https://github.com/bayashi/go-jl/releases/download/v1.2.0/go-jl_1.2.0_linux_amd64.tar.gz"
+      sha256 "dc040c627310d784bcb99068e54e065a7df310dd7b2088e3c4c6341e8ba66efa"
 
       def install
         bin.install "jl"
