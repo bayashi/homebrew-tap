@@ -5,20 +5,20 @@
 class Irir < Formula
   desc "A filter to add colors for text lines generically from a YAML configuration file easily"
   homepage "https://github.com/bayashi/irir"
-  version "0.5.2"
+  version "0.5.3"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/bayashi/irir/releases/download/v0.5.2/irir_0.5.2_darwin_amd64.tar.gz"
-      sha256 "5b77a586a20daaa444e6b485ca60373ba9973531cb0cc251ec8942324ec18c58"
+      url "https://github.com/bayashi/irir/releases/download/v0.5.3/irir_0.5.3_darwin_amd64.tar.gz"
+      sha256 "db5324c0effe32390e801f42f8a7240a187d06e2832c546117f42095b24ed298"
 
       def install
         bin.install "irir"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/bayashi/irir/releases/download/v0.5.2/irir_0.5.2_darwin_arm64.tar.gz"
-      sha256 "3b4653b9b8e70254ad107a363a37ff7dfc7a65e909fa19d44d1afc0bbd18fe22"
+      url "https://github.com/bayashi/irir/releases/download/v0.5.3/irir_0.5.3_darwin_arm64.tar.gz"
+      sha256 "9aa9f23330b30afb489c367ef4be13fafddccd3052ac0a37f87e3debab073077"
 
       def install
         bin.install "irir"
@@ -28,16 +28,16 @@ class Irir < Formula
 
   on_linux do
     if Hardware::CPU.intel?
-      url "https://github.com/bayashi/irir/releases/download/v0.5.2/irir_0.5.2_linux_amd64.tar.gz"
-      sha256 "d0b0202373a401f5e90bf03829cd16b3c4b1f35f865fab4df64442c8e53b692c"
+      url "https://github.com/bayashi/irir/releases/download/v0.5.3/irir_0.5.3_linux_amd64.tar.gz"
+      sha256 "457ca0deae9e09013caedbea6a2b2b6b2811410fae8e7f7ec86582d069d9dba1"
 
       def install
         bin.install "irir"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/bayashi/irir/releases/download/v0.5.2/irir_0.5.2_linux_arm64.tar.gz"
-      sha256 "b8acf5a1f1e08e4cd2762c718b714b07d2c7eb521b943ad0f3c7c509e842661c"
+      url "https://github.com/bayashi/irir/releases/download/v0.5.3/irir_0.5.3_linux_arm64.tar.gz"
+      sha256 "d14f64a35e94f851c323385c03ee0c8737e75992486d8bdbc3dd450c7c01fb1b"
 
       def install
         bin.install "irir"
