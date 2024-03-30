@@ -5,20 +5,20 @@
 class Xfg < Formula
   desc "Do `find` paths by a keyword, and also search for contents like a `grep` in one command."
   homepage "https://github.com/bayashi/xfg"
-  version "0.0.2"
+  version "0.0.3"
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/bayashi/xfg/releases/download/v0.0.2/xfg_0.0.2_darwin_arm64.tar.gz"
-      sha256 "d5a60e612b81c301304440d6e8f04851e02837c0071fea605c001bb9024bcd70"
+      url "https://github.com/bayashi/xfg/releases/download/v0.0.3/xfg_0.0.3_darwin_arm64.tar.gz"
+      sha256 "543d57441382772d43cdcb16e199344999926c7c3169d7e74ecf1a25e99f10dd"
 
       def install
         bin.install "xfg"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/bayashi/xfg/releases/download/v0.0.2/xfg_0.0.2_darwin_amd64.tar.gz"
-      sha256 "829846e6fda61dfb7f2f868b1b717b9ed23b4bbc072a454166dc5a0f1cb789ed"
+      url "https://github.com/bayashi/xfg/releases/download/v0.0.3/xfg_0.0.3_darwin_amd64.tar.gz"
+      sha256 "25e18e70ceec74dd61dd0b2d098b8ad05fe56333ed638b69081f289a5b7227bf"
 
       def install
         bin.install "xfg"
@@ -28,16 +28,16 @@ class Xfg < Formula
 
   on_linux do
     if Hardware::CPU.intel?
-      url "https://github.com/bayashi/xfg/releases/download/v0.0.2/xfg_0.0.2_linux_amd64.tar.gz"
-      sha256 "b35afdf6830f1de601399b1ad2ae0cbfea0c8050e2c9a86544963c3711320a5e"
+      url "https://github.com/bayashi/xfg/releases/download/v0.0.3/xfg_0.0.3_linux_amd64.tar.gz"
+      sha256 "211fa36326b05899b04e638ce8300d683c38dd43afedc7ad8f015d8d5d34ee66"
 
       def install
         bin.install "xfg"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/bayashi/xfg/releases/download/v0.0.2/xfg_0.0.2_linux_arm64.tar.gz"
-      sha256 "c3dcb2dee5f2a2639c20ed542b4012003b4c0f43b690b4766f3db08cdac330e9"
+      url "https://github.com/bayashi/xfg/releases/download/v0.0.3/xfg_0.0.3_linux_arm64.tar.gz"
+      sha256 "76187be68b76bf8cd7665fa8eb400f084da23c862aa3f9322c29ce85f93ff65c"
 
       def install
         bin.install "xfg"
