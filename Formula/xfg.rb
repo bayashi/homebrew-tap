@@ -5,20 +5,20 @@
 class Xfg < Formula
   desc "Do `find` paths by a keyword, and also search for contents like a `grep` in one command."
   homepage "https://github.com/bayashi/xfg"
-  version "0.0.3"
+  version "0.0.4"
 
   on_macos do
-    if Hardware::CPU.arm?
-      url "https://github.com/bayashi/xfg/releases/download/v0.0.3/xfg_0.0.3_darwin_arm64.tar.gz"
-      sha256 "543d57441382772d43cdcb16e199344999926c7c3169d7e74ecf1a25e99f10dd"
+    if Hardware::CPU.intel?
+      url "https://github.com/bayashi/xfg/releases/download/v0.0.4/xfg_0.0.4_darwin_amd64.tar.gz"
+      sha256 "665826cdf9a2d7e729f2307f8d66f7d9ecb945e20b11abc3c82b0cde24b50fdd"
 
       def install
         bin.install "xfg"
       end
     end
-    if Hardware::CPU.intel?
-      url "https://github.com/bayashi/xfg/releases/download/v0.0.3/xfg_0.0.3_darwin_amd64.tar.gz"
-      sha256 "25e18e70ceec74dd61dd0b2d098b8ad05fe56333ed638b69081f289a5b7227bf"
+    if Hardware::CPU.arm?
+      url "https://github.com/bayashi/xfg/releases/download/v0.0.4/xfg_0.0.4_darwin_arm64.tar.gz"
+      sha256 "335bab2475cf74f02c8afda89d1fcb2fce17a7c1d3d37629b1145a77c4c1ce9a"
 
       def install
         bin.install "xfg"
@@ -27,17 +27,17 @@ class Xfg < Formula
   end
 
   on_linux do
-    if Hardware::CPU.intel?
-      url "https://github.com/bayashi/xfg/releases/download/v0.0.3/xfg_0.0.3_linux_amd64.tar.gz"
-      sha256 "211fa36326b05899b04e638ce8300d683c38dd43afedc7ad8f015d8d5d34ee66"
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/bayashi/xfg/releases/download/v0.0.4/xfg_0.0.4_linux_arm64.tar.gz"
+      sha256 "3b8e5c6242d8914480737fcc9d3ac18c430ec0b0e07ca9b8ebc48efc0d7cae10"
 
       def install
         bin.install "xfg"
       end
     end
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/bayashi/xfg/releases/download/v0.0.3/xfg_0.0.3_linux_arm64.tar.gz"
-      sha256 "76187be68b76bf8cd7665fa8eb400f084da23c862aa3f9322c29ce85f93ff65c"
+    if Hardware::CPU.intel?
+      url "https://github.com/bayashi/xfg/releases/download/v0.0.4/xfg_0.0.4_linux_amd64.tar.gz"
+      sha256 "61cf571221360a5d9947f2c85016e6d2e2ef6fc6e29fd7bff5656c63a09ece95"
 
       def install
         bin.install "xfg"
