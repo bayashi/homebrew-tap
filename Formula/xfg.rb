@@ -5,20 +5,20 @@
 class Xfg < Formula
   desc "Do `find` paths by a keyword, and also search for contents like a `grep` in one command."
   homepage "https://github.com/bayashi/xfg"
-  version "0.0.4"
+  version "0.0.5"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/bayashi/xfg/releases/download/v0.0.4/xfg_0.0.4_darwin_amd64.tar.gz"
-      sha256 "665826cdf9a2d7e729f2307f8d66f7d9ecb945e20b11abc3c82b0cde24b50fdd"
+      url "https://github.com/bayashi/xfg/releases/download/v0.0.5/xfg_0.0.5_darwin_amd64.tar.gz"
+      sha256 "26935d27d2d756884049fd568b37bc7e2777abf07ac5ecb725037a2bcf285cbe"
 
       def install
         bin.install "xfg"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/bayashi/xfg/releases/download/v0.0.4/xfg_0.0.4_darwin_arm64.tar.gz"
-      sha256 "335bab2475cf74f02c8afda89d1fcb2fce17a7c1d3d37629b1145a77c4c1ce9a"
+      url "https://github.com/bayashi/xfg/releases/download/v0.0.5/xfg_0.0.5_darwin_arm64.tar.gz"
+      sha256 "6ae8591f77c26a996ece72ae9852aa50470c26b502a375e10031bdfe1c6c72d2"
 
       def install
         bin.install "xfg"
@@ -27,17 +27,17 @@ class Xfg < Formula
   end
 
   on_linux do
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/bayashi/xfg/releases/download/v0.0.4/xfg_0.0.4_linux_arm64.tar.gz"
-      sha256 "3b8e5c6242d8914480737fcc9d3ac18c430ec0b0e07ca9b8ebc48efc0d7cae10"
+    if Hardware::CPU.intel?
+      url "https://github.com/bayashi/xfg/releases/download/v0.0.5/xfg_0.0.5_linux_amd64.tar.gz"
+      sha256 "6601bcda69e3647fb41bfd26b4b718e3665520e776a02efd77cc0a85b8e10add"
 
       def install
         bin.install "xfg"
       end
     end
-    if Hardware::CPU.intel?
-      url "https://github.com/bayashi/xfg/releases/download/v0.0.4/xfg_0.0.4_linux_amd64.tar.gz"
-      sha256 "61cf571221360a5d9947f2c85016e6d2e2ef6fc6e29fd7bff5656c63a09ece95"
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/bayashi/xfg/releases/download/v0.0.5/xfg_0.0.5_linux_arm64.tar.gz"
+      sha256 "ce212b6d51e36e5aae707c415fcbc20bf809f827c4a3bf8ee6bec988459e5cd1"
 
       def install
         bin.install "xfg"
