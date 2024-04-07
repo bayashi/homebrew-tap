@@ -5,20 +5,20 @@
 class Xfg < Formula
   desc "Do `find` paths by a keyword, and also search for contents like a `grep` in one command."
   homepage "https://github.com/bayashi/xfg"
-  version "0.0.5"
+  version "0.0.6"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/bayashi/xfg/releases/download/v0.0.5/xfg_0.0.5_darwin_amd64.tar.gz"
-      sha256 "26935d27d2d756884049fd568b37bc7e2777abf07ac5ecb725037a2bcf285cbe"
+      url "https://github.com/bayashi/xfg/releases/download/v0.0.6/xfg_0.0.6_darwin_amd64.tar.gz"
+      sha256 "7b071950a509042ca864a673a7d911814716cafe463f230112f7445efc7979ed"
 
       def install
         bin.install "xfg"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/bayashi/xfg/releases/download/v0.0.5/xfg_0.0.5_darwin_arm64.tar.gz"
-      sha256 "6ae8591f77c26a996ece72ae9852aa50470c26b502a375e10031bdfe1c6c72d2"
+      url "https://github.com/bayashi/xfg/releases/download/v0.0.6/xfg_0.0.6_darwin_arm64.tar.gz"
+      sha256 "a0cdb841d84b8d113b84473a4dde973697a2443befa40de256a68c514597dff3"
 
       def install
         bin.install "xfg"
@@ -28,16 +28,16 @@ class Xfg < Formula
 
   on_linux do
     if Hardware::CPU.intel?
-      url "https://github.com/bayashi/xfg/releases/download/v0.0.5/xfg_0.0.5_linux_amd64.tar.gz"
-      sha256 "6601bcda69e3647fb41bfd26b4b718e3665520e776a02efd77cc0a85b8e10add"
+      url "https://github.com/bayashi/xfg/releases/download/v0.0.6/xfg_0.0.6_linux_amd64.tar.gz"
+      sha256 "a23ba83a259df4dadde471ba200edce19963fcbf66c07534f977c2d0a04925ba"
 
       def install
         bin.install "xfg"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/bayashi/xfg/releases/download/v0.0.5/xfg_0.0.5_linux_arm64.tar.gz"
-      sha256 "ce212b6d51e36e5aae707c415fcbc20bf809f827c4a3bf8ee6bec988459e5cd1"
+      url "https://github.com/bayashi/xfg/releases/download/v0.0.6/xfg_0.0.6_linux_arm64.tar.gz"
+      sha256 "771258a33d7b4600190752d406e43fe9f5d58b54ad0e40c8503c72bcdb3a650c"
 
       def install
         bin.install "xfg"
