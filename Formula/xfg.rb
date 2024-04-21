@@ -5,20 +5,20 @@
 class Xfg < Formula
   desc "Do `find` paths by a keyword, and also search for contents like a `grep` in one command."
   homepage "https://github.com/bayashi/xfg"
-  version "0.0.12"
+  version "0.0.13"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/bayashi/xfg/releases/download/v0.0.12/xfg_0.0.12_darwin_amd64.tar.gz"
-      sha256 "7fdb1fd7b8aa1e2a6cc1f8a11f8f86d8b32fe59d5ed6fe2323ee29c64e20d2c1"
+      url "https://github.com/bayashi/xfg/releases/download/v0.0.13/xfg_0.0.13_darwin_amd64.tar.gz"
+      sha256 "4f85778885f38d815e1e806ca30dd3539f801f251ffe4fe5b58361f7f440090f"
 
       def install
         bin.install "xfg"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/bayashi/xfg/releases/download/v0.0.12/xfg_0.0.12_darwin_arm64.tar.gz"
-      sha256 "b6e7c2e62587415bdf1b4a446dee02a21ed6559916ca0a9929ceabf570c6c098"
+      url "https://github.com/bayashi/xfg/releases/download/v0.0.13/xfg_0.0.13_darwin_arm64.tar.gz"
+      sha256 "028af3d9ee134529fb55c244de19f6aea422700a7a74c8091d0a9b444795cc2b"
 
       def install
         bin.install "xfg"
@@ -28,16 +28,16 @@ class Xfg < Formula
 
   on_linux do
     if Hardware::CPU.intel?
-      url "https://github.com/bayashi/xfg/releases/download/v0.0.12/xfg_0.0.12_linux_amd64.tar.gz"
-      sha256 "d3da203d9c393143e8cd621e886bbbf4dbc30316ab644712e72747a7b5bf6786"
+      url "https://github.com/bayashi/xfg/releases/download/v0.0.13/xfg_0.0.13_linux_amd64.tar.gz"
+      sha256 "2cf1df50ac2f4f1d547f6e93afd1b75bedc10fcb4660653a652046405a4c1a1f"
 
       def install
         bin.install "xfg"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/bayashi/xfg/releases/download/v0.0.12/xfg_0.0.12_linux_arm64.tar.gz"
-      sha256 "02e55f23625e17cc7795290fa2226b7212fed06a1e856bb94c6d2c243ba22c76"
+      url "https://github.com/bayashi/xfg/releases/download/v0.0.13/xfg_0.0.13_linux_arm64.tar.gz"
+      sha256 "bd5e36ca3e14dc0f621dd544f89a48e44baaa57db9ce747ef4da0cbd6b76c09c"
 
       def install
         bin.install "xfg"
