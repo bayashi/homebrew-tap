@@ -5,20 +5,20 @@
 class Qq < Formula
   desc "References of Quick Questions"
   homepage "https://github.com/bayashi/qq"
-  version "0.0.1"
+  version "0.0.2"
 
   on_macos do
     on_intel do
-      url "https://github.com/bayashi/qq/releases/download/v0.0.1/qq_0.0.1_darwin_amd64.tar.gz"
-      sha256 "d2efa69323bd1904fd74406168ce71595f6cf89123a0409b85461d7ba7f5295b"
+      url "https://github.com/bayashi/qq/releases/download/v0.0.2/qq_0.0.2_darwin_amd64.tar.gz"
+      sha256 "e47f09d2f970b9f9562e3623582db70917b0685e726c2df064773c3097788ddb"
 
       def install
         bin.install "qq"
       end
     end
     on_arm do
-      url "https://github.com/bayashi/qq/releases/download/v0.0.1/qq_0.0.1_darwin_arm64.tar.gz"
-      sha256 "e5ee61e654917240a94cada5f4880c0c978e0db75083df8dbac5108aa789ab6d"
+      url "https://github.com/bayashi/qq/releases/download/v0.0.2/qq_0.0.2_darwin_arm64.tar.gz"
+      sha256 "51906917a3748c3e91e4b4aa600738daf2b275b1236c852560e3abecb30026e3"
 
       def install
         bin.install "qq"
@@ -29,8 +29,8 @@ class Qq < Formula
   on_linux do
     on_intel do
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/bayashi/qq/releases/download/v0.0.1/qq_0.0.1_linux_amd64.tar.gz"
-        sha256 "7f082a3d34bb98671f536711806ae4467b9ee96ef1d7028439c797eaaa0df036"
+        url "https://github.com/bayashi/qq/releases/download/v0.0.2/qq_0.0.2_linux_amd64.tar.gz"
+        sha256 "1293e3b2192cf366179f37777cce44385c0ff0586acf1a495cd3b8f4818ec544"
 
         def install
           bin.install "qq"
@@ -39,8 +39,8 @@ class Qq < Formula
     end
     on_arm do
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/bayashi/qq/releases/download/v0.0.1/qq_0.0.1_linux_arm64.tar.gz"
-        sha256 "a50d3d5408bfc5180bfa6460a5d6c1bf621f5845b4f1895945d995872af00c30"
+        url "https://github.com/bayashi/qq/releases/download/v0.0.2/qq_0.0.2_linux_arm64.tar.gz"
+        sha256 "d33ea931599cf869e07f4d84e8c8a808a67e18507d3dfd19e4a6cbf2535873b2"
 
         def install
           bin.install "qq"
