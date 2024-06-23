@@ -5,20 +5,20 @@
 class GoJl < Formula
   desc "Show the `JSON within JSON` log nicely"
   homepage "https://github.com/bayashi/go-jl"
-  version "1.2.0"
+  version "1.3.0"
 
   on_macos do
-    if Hardware::CPU.intel?
-      url "https://github.com/bayashi/go-jl/releases/download/v1.2.0/go-jl_1.2.0_darwin_amd64.tar.gz"
-      sha256 "3fd5ee8ba49301c75665a4438f95316c80435888480ce2428590c4cecc2b9b8e"
+    on_intel do
+      url "https://github.com/bayashi/go-jl/releases/download/v1.3.0/go-jl_1.3.0_darwin_amd64.tar.gz"
+      sha256 "44ee6092c470619725f1371af2e59a9dceee0c833f4d1b3fa9145ebbc9472c64"
 
       def install
         bin.install "jl"
       end
     end
-    if Hardware::CPU.arm?
-      url "https://github.com/bayashi/go-jl/releases/download/v1.2.0/go-jl_1.2.0_darwin_arm64.tar.gz"
-      sha256 "cb1c002e29d4716c9692da0eddf0104c073923453ca099f937a02367b52471f3"
+    on_arm do
+      url "https://github.com/bayashi/go-jl/releases/download/v1.3.0/go-jl_1.3.0_darwin_arm64.tar.gz"
+      sha256 "2693dff1be95e554cce3b01c8d7c97142f3eda5b12341a60ac02eb5d741004a6"
 
       def install
         bin.install "jl"
@@ -27,20 +27,24 @@ class GoJl < Formula
   end
 
   on_linux do
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/bayashi/go-jl/releases/download/v1.2.0/go-jl_1.2.0_linux_arm64.tar.gz"
-      sha256 "25abfafd35d5c1efbcfd35f7404f94a4432d97e3432eebe11ff92840e57d5919"
+    on_intel do
+      if Hardware::CPU.is_64_bit?
+        url "https://github.com/bayashi/go-jl/releases/download/v1.3.0/go-jl_1.3.0_linux_amd64.tar.gz"
+        sha256 "ebc2cdf2b36038893eb6f1b8236f2034902538310cdd9cdb8f13dab52da60847"
 
-      def install
-        bin.install "jl"
+        def install
+          bin.install "jl"
+        end
       end
     end
-    if Hardware::CPU.intel?
-      url "https://github.com/bayashi/go-jl/releases/download/v1.2.0/go-jl_1.2.0_linux_amd64.tar.gz"
-      sha256 "dc040c627310d784bcb99068e54e065a7df310dd7b2088e3c4c6341e8ba66efa"
+    on_arm do
+      if Hardware::CPU.is_64_bit?
+        url "https://github.com/bayashi/go-jl/releases/download/v1.3.0/go-jl_1.3.0_linux_arm64.tar.gz"
+        sha256 "200c9a3e44a7d103ccf729735a9ce5e4905b1988ddd32d5718220061b5a71800"
 
-      def install
-        bin.install "jl"
+        def install
+          bin.install "jl"
+        end
       end
     end
   end
