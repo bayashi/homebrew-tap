@@ -5,20 +5,21 @@
 class Highlightrepo < Formula
   desc "highlightrepo provides a filter to highlight repository directory in a path string."
   homepage "https://github.com/bayashi/highlightrepo"
-  version "0.0.1"
+  version "0.0.2"
+  license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/bayashi/highlightrepo/releases/download/v0.0.1/highlightrepo_0.0.1_darwin_amd64.tar.gz"
-      sha256 "7b00c5764f883f34ed8c814994dde20a9b7c108bb50ec2310a00e76b2c468778"
+      url "https://github.com/bayashi/highlightrepo/releases/download/v0.0.2/highlightrepo_0.0.2_darwin_amd64.tar.gz"
+      sha256 "dd0fefeb39424b56d0dd10e0e3509305509d36ec2d2428349efea9a73ff35c7c"
 
       def install
         bin.install "irir"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/bayashi/highlightrepo/releases/download/v0.0.1/highlightrepo_0.0.1_darwin_arm64.tar.gz"
-      sha256 "406205a75291299d3a4f9b3baf4e8e3cce492b4d8ef33024c9096dc6e898535c"
+      url "https://github.com/bayashi/highlightrepo/releases/download/v0.0.2/highlightrepo_0.0.2_darwin_arm64.tar.gz"
+      sha256 "1e3f5a93d9e4738b5c51f78ae5efb73588ccbda949ee692c07e8dfaea0e705e0"
 
       def install
         bin.install "irir"
@@ -28,19 +29,23 @@ class Highlightrepo < Formula
 
   on_linux do
     if Hardware::CPU.intel?
-      url "https://github.com/bayashi/highlightrepo/releases/download/v0.0.1/highlightrepo_0.0.1_linux_amd64.tar.gz"
-      sha256 "fd42f7311a580ce2b795a6dcc3e204f7728a8d2d016947032731ac3402cb948e"
+      if Hardware::CPU.is_64_bit?
+        url "https://github.com/bayashi/highlightrepo/releases/download/v0.0.2/highlightrepo_0.0.2_linux_amd64.tar.gz"
+        sha256 "1bb2c289b00323f25de2d9996e904f0e342ab388cb76f3d3edf12e4ebd4b66db"
 
-      def install
-        bin.install "irir"
+        def install
+          bin.install "irir"
+        end
       end
     end
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/bayashi/highlightrepo/releases/download/v0.0.1/highlightrepo_0.0.1_linux_arm64.tar.gz"
-      sha256 "342cb90fe457d5ab83ff0b68a0112c0381a057021f0f5bbb75fa0c5f6474d892"
+    if Hardware::CPU.arm?
+      if Hardware::CPU.is_64_bit?
+        url "https://github.com/bayashi/highlightrepo/releases/download/v0.0.2/highlightrepo_0.0.2_linux_arm64.tar.gz"
+        sha256 "2f093054744ed4b9585dd5fc74938dd9cb1817da5e1a726ab11f9ed1629abdea"
 
-      def install
-        bin.install "irir"
+        def install
+          bin.install "irir"
+        end
       end
     end
   end
