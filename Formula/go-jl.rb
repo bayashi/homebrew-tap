@@ -5,20 +5,20 @@
 class GoJl < Formula
   desc "Show the `JSON within JSON` log nicely"
   homepage "https://github.com/bayashi/go-jl"
-  version "1.3.3"
+  version "1.3.4"
 
   on_macos do
     on_intel do
-      url "https://github.com/bayashi/go-jl/releases/download/v1.3.3/go-jl_1.3.3_darwin_amd64.tar.gz"
-      sha256 "113cbcfac626c207c37ccbec8627aa621885e5851eb33df09aa8fbf9dcb4dbfe"
+      url "https://github.com/bayashi/go-jl/releases/download/v1.3.4/go-jl_1.3.4_darwin_amd64.tar.gz"
+      sha256 "3241ff982c5d43640922c937dda338c278e8d40a57e8bf5039a9057af69afbcd"
 
       def install
         bin.install "jl"
       end
     end
     on_arm do
-      url "https://github.com/bayashi/go-jl/releases/download/v1.3.3/go-jl_1.3.3_darwin_arm64.tar.gz"
-      sha256 "40d6c82fe65d00a3122b388a8e846b69016cd89ed6944f17198e426b4f35c318"
+      url "https://github.com/bayashi/go-jl/releases/download/v1.3.4/go-jl_1.3.4_darwin_arm64.tar.gz"
+      sha256 "14bcfb10a7c403eb1698b72b4378c9664075ba6d5d82ad94ea0a412ab0912f7d"
 
       def install
         bin.install "jl"
@@ -29,8 +29,8 @@ class GoJl < Formula
   on_linux do
     on_intel do
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/bayashi/go-jl/releases/download/v1.3.3/go-jl_1.3.3_linux_amd64.tar.gz"
-        sha256 "a68c4fce77680a9850e1ebe985619b822c686696e180bfd7b053c986ffd1ea22"
+        url "https://github.com/bayashi/go-jl/releases/download/v1.3.4/go-jl_1.3.4_linux_amd64.tar.gz"
+        sha256 "4e174d632e46d1dc750f853b92356ee1f2c34eae786b6f2b1fbaeefa716faafe"
 
         def install
           bin.install "jl"
@@ -39,8 +39,8 @@ class GoJl < Formula
     end
     on_arm do
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/bayashi/go-jl/releases/download/v1.3.3/go-jl_1.3.3_linux_arm64.tar.gz"
-        sha256 "04e156ac0f6e34154efe56538e47cb7333751230e3eb0704888ef16cb0986865"
+        url "https://github.com/bayashi/go-jl/releases/download/v1.3.4/go-jl_1.3.4_linux_arm64.tar.gz"
+        sha256 "08cd4cb84223a5cf88d6b5fe18b0a6d91836fe4c3723dc0f18b54fa5ec0ef52d"
 
         def install
           bin.install "jl"
