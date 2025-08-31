@@ -5,21 +5,21 @@
 class Xfg < Formula
   desc "Do `find` paths by a keyword, and also search for contents like a `grep` in one command."
   homepage "https://github.com/bayashi/xfg"
-  version "0.0.27"
+  version "0.0.28"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/bayashi/xfg/releases/download/v0.0.27/xfg_0.0.27_darwin_amd64.tar.gz"
-      sha256 "52c34cfb0e8d01056adad6c85e37ff7141dd76d4ff331cc56055a2ff9c307b2f"
+      url "https://github.com/bayashi/xfg/releases/download/v0.0.28/xfg_0.0.28_darwin_amd64.tar.gz"
+      sha256 "0be5685965d9165b2945990f3bf2079a30121d7a15873219f866f0da450e9aea"
 
       def install
         bin.install "xfg"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/bayashi/xfg/releases/download/v0.0.27/xfg_0.0.27_darwin_arm64.tar.gz"
-      sha256 "b9e21a77677efd4029f3406baea66c2f79aa479b6ec874782330b7bc710af75c"
+      url "https://github.com/bayashi/xfg/releases/download/v0.0.28/xfg_0.0.28_darwin_arm64.tar.gz"
+      sha256 "c1f146aa262459ed16689a0a8a352c45e5e55b7e253fbe532c84493d7be9acb8"
 
       def install
         bin.install "xfg"
@@ -28,24 +28,18 @@ class Xfg < Formula
   end
 
   on_linux do
-    if Hardware::CPU.intel?
-      if Hardware::CPU.is_64_bit?
-        url "https://github.com/bayashi/xfg/releases/download/v0.0.27/xfg_0.0.27_linux_amd64.tar.gz"
-        sha256 "5262e86009458a116b197784d2bdfcfc3ac09865597e8aef4fa945eadb5d5447"
-
-        def install
-          bin.install "xfg"
-        end
+    if Hardware::CPU.intel? and Hardware::CPU.is_64_bit?
+      url "https://github.com/bayashi/xfg/releases/download/v0.0.28/xfg_0.0.28_linux_amd64.tar.gz"
+      sha256 "dfc52d5a59974147993c0cf846221b1773d4a24e2dd6eeddd6e5e583cd227a41"
+      def install
+        bin.install "xfg"
       end
     end
-    if Hardware::CPU.arm?
-      if Hardware::CPU.is_64_bit?
-        url "https://github.com/bayashi/xfg/releases/download/v0.0.27/xfg_0.0.27_linux_arm64.tar.gz"
-        sha256 "ddb5cc54e52b7e3f3ae2f75745920c5e311923f796e3a579bbaad33fa666cb91"
-
-        def install
-          bin.install "xfg"
-        end
+    if Hardware::CPU.arm? and Hardware::CPU.is_64_bit?
+      url "https://github.com/bayashi/xfg/releases/download/v0.0.28/xfg_0.0.28_linux_arm64.tar.gz"
+      sha256 "70cd032bf7006026255c9797fb85533226cf5e87976f554afa44b28522ff2451"
+      def install
+        bin.install "xfg"
       end
     end
   end
